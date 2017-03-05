@@ -1,0 +1,31 @@
+<div class="date-container col-md-offset-2 col-md-8 col-xs-12">
+    <div class="well" *ngFor="let hour of calendar" (click)="open(hour)" [ngClass]="hour.reserved ? 'reserved' : ''">
+        <div class="row">
+          <div class="col-xs-12">{{hour.hour}} {{hour.meridiem}}</div>
+          <div class="col-xs-12">{{hour.name}}</div>
+          <div class="col-xs-12">{{hour.phoneNumber}}</div>
+        </div>
+    </div>
+</div>
+  <modal [animation]="animation" [keyboard]="keyboard" [backdrop]="backdrop" (onClose)="closed()" (onDismiss)="dismissed()"
+      (onOpen)="opened()" [cssClass]="cssClass" #validationModal>
+      <form>
+          <modal-header [show-close]="true">
+              <h4 class="modal-title">Make a Reservation</h4>
+          </modal-header>
+          <modal-body>
+              <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" required [(ngModel)]="name" name="name" id="name">
+              </div>
+              <div class="form-group">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="text" class="form-control" required [(ngModel)]="phoneNumber" name="phoneNumber" id="phoneNumber">
+              </div>
+          </modal-body>
+          <modal-footer>
+              <button type="button" class="btn btn-default" data-dismiss="modal" (click)="cancel()">Cancel</button>
+              <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+          </modal-footer>
+      </form>
+  </modal>

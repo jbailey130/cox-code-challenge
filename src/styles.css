@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 5px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.navbar-default{
+    background-color: white;
+}
+
+.navbar-brand > img{
+    height: 40px;
+}

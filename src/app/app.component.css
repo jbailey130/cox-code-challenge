@@ -1,0 +1,27 @@
+
+.ng-valid[required] {
+    border-left: 5px solid #5cb85c; /* green */
+}
+.ng-invalid:not(.ng-untouched):not(form) {
+    border-left: 5px solid #d9534f; /* red */
+}
+.red-text {
+    color: #d9534f !important; /* red */
+}
+
+.well{
+    margin-bottom: 0;
+}
+
+p{
+    padding-left: 15px;
+}
+
+.reserved{
+    background-color: #d9534f;
+    color:white; 
+}
+
+.date-container{
+    margin-top: 65px;
+}
